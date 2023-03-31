@@ -1,0 +1,124 @@
+/* Importando a fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+/* tag :root{--variavel: valor} declarar variavel no css */
+:root{
+    --cor-primaria: #2C3333;
+    --cor-secundaria: #0E8388;
+    --cor-terciaria: #CBE4DE;
+    --cor-hover: #2E4F4F;
+    --fonte-principal: font-family: 'Krona One', sans-serif;
+    --fonte-secundaira: font-family: 'Montserrat', sans-serif;
+}
+/* tag "*{}" para selecionar todos os elementos da pagina*/
+*{
+    /* resetando o box model */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* Geralmente utilizado no inicio do codigo para ocupar toda a tela*/
+    /* height: 100vh;  */
+    /* propriedade "box-sizing: border-box" para organizar o conteudo e evitar o elemento filho sair do elemento pai */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+.conteudo{
+    /* tag "margin: coloca margem dentro dos itens, quando tem 2 valores vale por X e Y  */
+    margin: 9% 15%;
+    /* tag "display:flex;" ela inicia a utilização do flexbox utilizada na classe pai */
+    display:flex;
+    /* tag "align-items: center;" para alinhar itens com flexbox usada no elemento pai */
+    align-items: center;
+    /* tag "justify-content:space-between;" para dar espaço nos elementos usado no elemento pai */
+    justify-content: space-between;
+}
+.conteudo-texto{
+    /* selecionando tamanho do box-sizing:border-box, usando % para ocupar o espaço "equivalente a foto" */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conteudo-texto-titulo{
+    /* "font-family: nome_da_fonte , sans-serif ;" chama a fonte pra o CSS depois de fazer a importação dela */
+    font-family: var(--fonte-principal);
+    /* unidade de medida "rem" o px(pixel) desejado deve ser divido por 16 */
+    font-size: 2.5rem;
+    /* mudando o peso da fonte */
+    font-weight: 600;
+
+}
+.conteudo-texto-subtitulo{
+   color: var(--cor-secundaria);
+}
+.conteudo-texto-paragrafo{
+    font-family: var(--fonte-secundaira);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.conteudo-texto-botao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* "align-items:center" alinhando itens no elemento pai */
+    align-items: center;
+    gap: 10px;  
+}
+.conteudo-texto-botao-subtitulo{
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+}
+.conteudo-texto-botao-link{
+    display:flex;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    /* adicionando tamanho do botão */
+    width: 55%;
+    /* "text-decoration:nome" tira a decoração do hiperlink */
+    text-decoration: none;
+    /* adicionando uma borda fixa */
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 16px;
+    /* adicionando padding com dois valores para a distancia do conteudo para boda */
+    padding: 16px 0;
+    font-family: var(--fonte-secundaira);
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+
+}
+/* para usar o ":hover" para enfeitar algo quando passar o mouse em cima, tem que chamar a classe antes de declarar o hover */
+.conteudo-texto-botao-link:hover{
+    background-color: var(--cor-hover);    
+}
+.conteudo-imagem{
+    width: 40%;
+    /* "border-radius: numero px" serve para arredondar as bordas dos itens  */
+    border-radius: 360px;
+}
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    padding: 18px;
+    text-align: center;
+    font-family: var(--fonte-secundaira);
+    font-weight: 400;
+    font-size: 1.5rem;    
+}
+@media(max-width: 900px){
+    .conteudo{
+        flex-direction: column-reverse;
+    }
+    .conteudo-texto{
+        width: auto;
+    }
+    .conteudo-texto-botao-link{
+        width: 100%;
+    }
+    .conteudo-imagem{
+        width: 80% ;
+        border-radius: 8px;
+    }
+}
