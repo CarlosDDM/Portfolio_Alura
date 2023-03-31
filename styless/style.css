@@ -15,7 +15,6 @@ body{
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
-    max-width: max-content;
 }
 .conteudo{
     height:100%;
