@@ -16,7 +16,13 @@ body{
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
 }
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .conteudo{
+    flex: 1;
     height:100%;
     margin: 10% 15%;
     display:flex;
