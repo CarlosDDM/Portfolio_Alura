@@ -84,7 +84,8 @@ body{
     text-align: center;
     font-family: var(--fonte-secundaira);
     font-weight: 400;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
+    position:static;
 }
 @media(max-width: 900px){
     .conteudo{
