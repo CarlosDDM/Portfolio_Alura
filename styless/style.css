@@ -22,7 +22,6 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    width:100% ;
 }
 .conteudo-texto{
     width: 50%;
